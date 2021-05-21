@@ -1,0 +1,25 @@
+[package]
+name = "injectable-dll"
+version = "0.0.0"
+edition = "2018"
+authors = ["FssAy"]
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies.winapi]
+version = "0.3"
+features = [
+    "minwindef",
+    "winnt",
+    "libloaderapi",
+    "processthreadsapi"
+]
+
+[dependencies.libc]
+version = "0.2"
+features = [
+    "std",
+    "use_std",
+    "default"
+]
